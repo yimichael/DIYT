@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> D.Y.T do your trip </title>
+
+    <!-- Bootstrap -->
+    <link href="./3_bootstrap_sample/css/nomalize.css" rel="stylesheet">
+    <link href="./3_bootstrap_sample/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./3_bootstrap_sample/css/style.css" rel="stylesheet">
+    <link href="./3_bootstrap_sample/css/animate.css" rel="stylesheet">
+    <link href="./3_bootstrap_sample/css/jquery.fancybox.css" rel="stylesheet">
+    	<!-- bxSlider Javascript file -->
+	<script src="./bxslider/js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider CSS file -->
+	<link href="./bxslider/css/jquery.bxslider.css" rel="stylesheet" />
+
+
+
+	
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	opacity: 0.75;
+	color: #fff;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+	
+}
+
+header {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	
+	padding: 35px 100px 0;
+	
+	
+	color: #fff;
+}
+
+header h2 {
+	font-family: "Quicksand", sans-serif;
+}
+
+header nav {
+	display: flex;
+	margin-right: -15px;
+	margin-left: 100px;
+	z-index : 10;
+}
+
+header nav li {
+	margin: 0 15px;
+	margin-left: 30px;
+	font-size: 17px;
+}
+
+
+.hero {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #fff;
+	margin-top: -70px;
+}
+
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #80a3db;
+}
+
+
+h5 {
+	line-height : 1.6em;
+}
+
+.glyphicon {
+	color : #51ABF3;
+	font-size : 47px;
+}
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 250px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 500px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+
+<!--인기있는 여행지 포트폴리오-->
+* {
+    box-sizing: border-box;
+}
+
+.hero-content-area {
+margin-top: 100px;
+
+}
+
+
+
+body {
+    background-color: #f1f1f1;
+  
+}
+
+/* Center website */
+.main {
+    max-width: 1130px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+
+
+</style>
+<style>
+#foot{color:black;}
+</style>
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+       
+        
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+           
+            <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse navbar-left navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#"> D.Y.T do your trip </a></li>                   
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="DYT_login.html"> 로그인 </a></li>  
+                <li><a href="DYT_account.html"> 회원가입 </a></li>                   
+              </ul>
+            </div>
+            </div><!-- /.navbar-collapse -->           
+          </nav>
+               
+     
+
+	
+	  <header>
+   
+    <nav>
+      <li><a href="#">전체여행지</a></li>	
+      <li><a href="index.html">홈</a></li>
+      <li><a href="ticket.html">투어&티켓</a></li>
+      <li><a href="flight.html">항공권</a></li>
+      <li><a href="hotel.html">숙소</a></li>
+      
+    </nav>
+  </header>
+	
+	
+	 <section class="hero">
+    <div class="background-image" style="background-image: url(images/main.jpg);"></div>
+    <div class="hero-content-area">
+      <h1>전 세계 16,100개가 넘는 <br>투어&티켓을 만나보세요.</h1>
+      <form>
+			<input type="search" placeholder="도시 또는 상품 이름을 검색해 보세요">
+		</form>
+      
+     
+    </div>
+  </section>
+	
+	
+	
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-lg-2">
+						<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+					</div>
+					<div class="col-lg-10">
+						<h4>전 세계 투어&티켓 예약</h4>
+						<p>가이드 투어부터 교통 패스까지!</p>
+					</div>	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-lg-2">
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</div>	
+					<div class="col-lg-10">
+						<h4>최신 여행 후기</h4>
+						<p>직접 다녀온 여행자가 남긴 후기</p>
+					</div>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-lg-2">
+						<span class="glyphicon glyphicon-headphones"></span>
+					</div>
+					<div class="col-lg-10">	
+						<h4>1:1 가이드 문의</h4>
+						<p>현지 가이드에게 직접 문의하기</p>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h3>인기 여행지</h3>
+		<div class="row">
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="https://photos.travelblog.org/Photos/17776/951422/t/9017491-Osaka-Castle-0.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>오사카</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="https://www.australiansolarquotes.com.au/wp-content/uploads/2014/12/supertree-300x300.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>싱가포르</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="https://www.buro247.my/thumb/300x300/local/images/buro/Snarkitecture-Bounce-Hong-Kong-Installation_CRSq.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>홍콩</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="https://images.globusfamily.com/photos/WPP.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>파리</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="https://home.music-contact.com/wp-content/uploads/2017/03/Barcelona_200x200-1.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>바르셀로나</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+  			<div class="col-md-2 col-sm-6">
+    			<div class="thumbnail">
+      				<a href="#">
+        			<img src="http://www.reidsitaly.com/images/lazio/rome/sights/forum-thumb.jpg" alt="Lights" style="width:100%">
+        			<div class="caption">
+          				<p>로마</p>
+        			</div>
+      				</a>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		<h3>인기 가이드 투어</h3>
+		<div class="row">
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="http://5.imimg.com/data5/KR/VP/MY-3880808/kashi-2c-alahabaad-tours-500x500.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>[투어] 타이중 시내 반나절 투어<br>
+	        				    국가가극원&무지개마을&진...</h5>
+	        				<p style="color:blue">15,900원 /1인</p>
+	        				
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="http://segaetour.net/file_data/free3103/gallery/2017/06/19/db604c77825a28ef824b30974cff6a6c.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>[투어] 루스키섬 투어 :: 러시아/<br>
+	        				    블라디보스토크...</h5>
+	        				<p style="color:blue">9,600원 /1인</p>
+	        					
+	        				</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://danieltranphotography.com/wp-content/uploads/2017/11/Aurora-Over-Godafoss_Daniel-Tran-500x500.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>[투어] 레이캬비크 오로라<br>
+	        				    (Northern Lights)::아이슬란드..</h5>
+	        				<p style="color:blue">66,811원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://i.pinimg.com/originals/83/e9/89/83e989b5d923c8382727d6b2844a89e5.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>[보라카이] 공항 리조트 픽업 샌딩<br>
+	        				    왕복픽업 + 악마의 잼 1병...</h5>
+	        				<p style="color:blue">27,900원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+		</div>
+	</div>	
+	
+		<div class="container">
+		<h3>인기 티켓 / 교통패스</h3>
+		<div class="row">
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="http://ylholidays.com.my/image/cache/data/outbound-group/japan/osaka/jpn%20osaka01-500x500.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>오사카 유니버설 스튜디오 재팬<br>
+	        				   입장권</h5>
+	        				<p style="color:blue">53,600원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://cdn.shopify.com/s/files/1/0012/6373/0747/products/pre-order-tokyo-disney-sea-2018-duffy-friends-mitten-stellalou_163_x700.jpg?v=1535527302" alt="...">
+	      				<div class="caption">
+	        				<h5>[출력필수] 도쿄디즈니랜드<br>
+	        				    성인입장권 1...</h5>
+	        				<p style="color:blue">49,000원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://i.pinimg.com/originals/c5/39/22/c53922e7b62c55ce100e095646b57444.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>홍콩디즈니랜드<br>
+	        				    입장권티켓</h5>
+	        				<p style="color:blue">50,900원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-3">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://sg-live-01.slatic.net/original/530e2de12af992059b5dd94952eb7dac.jpg" alt="...">
+	      				<div class="caption">
+	        				<h5>싱가포르 유니버설 스튜디오<br>
+	        				    입장권/ 티켓</h5>
+	        				<p style="color:blue">35,800원 /1인</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+		</div>
+	</div>	
+	
+	
+		<div class="container">
+		<h3>테마가 있는 여행</h3>
+		<div class="row">
+  			<div class="col-sm-6 col-md-4">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://i0.wp.com/techverse.net/wp-content/uploads/2013/09/grandcanyon-21.jpg?resize=500%2C200" alt="...">
+	      				<div class="caption">
+	        				<h3>그랜드캐년</h3>
+	        				<p>1만원 할인코드 MRTGRAND10000</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-4">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-YMgkxdaFweV9YczZZsTVJJNOWtukoAUMOSf2Ok4frxXvdKb" alt="...">
+	      				<div class="caption">
+	        				<h3>몽생미셸 GO!</h3>
+	        				<p>야경까지 안전하게!</p>
+	        				
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			<div class="col-sm-6 col-md-4">
+  				<a href="#">
+	    			<div class="thumbnail">
+	      				<img src="https://78.media.tumblr.com/603ce8f1349b0ee2a0fb702fde2f13f6/tumblr_mrj7typ7S01swzmb4o1_500.jpg" alt="...">
+	      				<div class="caption">
+	        				<h3>버스타고 후쿠오카</h3>
+	        				<p>편하게, 안전하게, 즐겁게 떠나는 버스 투어!</p>
+	        				<p>
+	        					
+	        				</p>
+	      				</div>
+	    			</div>
+	    		</a>	
+  			</div>
+  			
+		</div>
+	</div>	
+ 
+	<footer>
+	  <p>Posted by: DYT</p>
+	  <p>Contact information: <a href="#">DYT.com</a></p>
+	  <p>상호명 DYT | 대표 : DYT | 개인정보책임자 : DYT
+	사업자등록번호 : ###-##-##### | 통신판매업신고번호 : 2018-서울서초-##### | 사업자정보확인
+	서울특별시 서초구 길거리 (주)DYT
+	일반 전화문의 : ####-#### | 일반 이메일문의 : DYT@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+	항공권 전화문의 : ####-#### | 항공권 이메일문의 : flights@DY.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+	마케팅/제휴 이메일문의 : marketing@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무
+	자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있지 않습니다.
+	DYT는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+	</footer>
+
+<script>
+
+
+//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+$("#nextBtn").click( function(){
+//다음 슬라이드 배너로 이동됩니다.
+mySlider.goToNextSlide();
+return false;
+});	
+
+filterSelection("osaka")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-hover-dropdown.js"></script>
+    <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/simpleparallax.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+  
+
+    </script>  
+</body>
+</html>
