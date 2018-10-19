@@ -104,7 +104,9 @@ h1 {
 
 <!-- 테마가 있는 여행-->
 </style>
-
+<style>
+#foot{color:black;}
+</style>
 </head>
 <body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
        
@@ -158,17 +160,17 @@ h1 {
 
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../3_bootstrap/123.jpg" alt="Los Angeles"
+				<img src="./images/slide1.jpg" alt="Los Angeles"
 					style="width: 100%;">
 			</div>
 
 			<div class="item">
-				<img src="../3_bootstrap/1234.jpg" alt="Chicago"
+				<img src="./images/slide2.jpg" alt="Chicago"
 					style="width: 100%;">
 			</div>
 
 			<div class="item">
-				<img src="../3_bootstrap/12345.jpg" alt="New york"
+				<img src="./images/slide3.jpg" alt="New york"
 					style="width: 100%;">
 			</div>
 		</div>
@@ -208,8 +210,8 @@ h1 {
      <a class="fancybox" rel="gallery2" href="./images/osaka1.jpg">
       <img src="./images/osaka1.jpg" alt="osaka castle" style="width:100%">
      </a>
-      <h4>오사카성</h4>
-      <p>야경</p>
+      <h4>오사카</h4>
+      <p>오사카성</p>
     </div>
   </div>
   <div class="column osaka">
@@ -217,8 +219,8 @@ h1 {
     <a class="fancybox" rel="gallery2" href="./images/osaka2.jpg">
      <img src="./images/osaka2.jpg" alt="osaka castle" style="width:100%">
     </a>
-      <h4>오사카성</h4>
-      <p>수로</p>
+      <h4>오사카</h4>
+      <p>공원</p>
     </div>
   </div>
   <div class="column osaka">
@@ -226,8 +228,8 @@ h1 {
     <a class="fancybox" rel="gallery2" href="./images/osaka3.jpg">
      <img src="./images/osaka3.jpg" alt="osaka market" style="width:100%">
     </a>  
-      <h4>오사카시장</h4>
-      <p>시장거리</p>
+      <h4>오사카</h4>
+      <p>시장</p>
     </div>
   </div>
   
@@ -237,7 +239,7 @@ h1 {
       <img src="./images/tokyo1.jpg" alt="street" style="width:100%">
     </a>
       <h4>도쿄</h4>
-      <p>길거리</p>
+      <p>도쿄타워</p>
     </div>
   </div>
   <div class="column tokyo">
@@ -246,7 +248,7 @@ h1 {
     <img src="./images/tokyo2.jpg" alt="night view" style="width:100%">
     </a>
       <h4>도쿄</h4>
-      <p>야경</p>
+      <p>밤거리</p>
     </div>
   </div>
   <div class="column tokyo">
@@ -255,7 +257,7 @@ h1 {
     <img src="./images/tokyo3.jpg" alt="night street" style="width:100%">
     </a>
       <h4>도쿄</h4>
-      <p>밤거리</p>
+      <p>디즈니랜드</p>
     </div>
   </div>
 
@@ -265,7 +267,7 @@ h1 {
       <img src="./images/paris1.jpg" alt="river" style="width:100%">
     </a>
       <h4>파리</h4>
-      <p>센강</p>
+      <p>에펠탑</p>
     </div>
   </div>
   <div class="column paris">
@@ -274,7 +276,7 @@ h1 {
       <img src="./images/paris2.jpg" alt="door" style="width:100%">
     </a>
       <h4>파리</h4>
-      <p>샹제리제 거리</p>
+      <p>루브르 박물관</p>
     </div>
   </div>
   <div class="column paris">
@@ -282,8 +284,8 @@ h1 {
     <a class="fancybox" rel="gallery2" href="./images/paris3.jpg">
       <img src="./images/paris3.jpg" alt="door" style="width:100%">
     </a>
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
+      <h4>파리</h4>
+      <p>개선문</p>
     </div>
   </div>
 <!-- END GRID -->
@@ -365,8 +367,8 @@ for (var i = 0; i < btns.length; i++) {
              </div>
              <div class="col-xs-3 col-md-3">
               <div class="thumbnail">
-                <a class="fancybox" rel="gallery2" href="./images/paris3.jpg">
-                  <img src="./images/paris3.jpg" alt="">
+                <a class="fancybox" rel="gallery2" href="./images/paris.jpg">
+                  <img src="./images/paris.jpg" alt="">
                 </a>
                 <div class="caption">
                     	<h4 style='text-align:center;'>파리</h4>
@@ -387,8 +389,8 @@ for (var i = 0; i < btns.length; i++) {
          </div> 
 <!-- 테마가 있는 여행 끝 -->
  
-<footer>
-  <p>Posted by: DYT</p>
+<footer id='foot'>
+  <p class='post'>Posted by: DYT</p>
   <p>Contact information: <a href="#">DYT.com</a></p>
   <p>상호명 DYT | 대표 : DYT | 개인정보책임자 : DYT
 사업자등록번호 : ###-##-##### | 통신판매업신고번호 : 2018-서울서초-##### | 사업자정보확인
@@ -420,12 +422,12 @@ DYT는 통신판매중개자이며 통신판매의 당사자가 아닙니다. �
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/bootstrap-hover-dropdown.js"></script>
-    <script src="./js/animatescroll.min.js"></script>
-    <script src="./js/simpleparallax.js"></script>
-    <script src="./js/waypoints.min.js"></script>
-    <script src="./js/jquery.fancybox.js"></script>
+    <script src="./3_bootstrap_sample/js/bootstrap.min.js"></script>
+    <script src="./3_bootstrap_sample/js/bootstrap-hover-dropdown.js"></script>
+    <script src="./3_bootstrap_sample/js/animatescroll.min.js"></script>
+    <script src="./3_bootstrap_sample/js/simpleparallax.js"></script>
+    <script src="./3_bootstrap_sample/js/waypoints.min.js"></script>
+    <script src="./3_bootstrap_sample/js/jquery.fancybox.js"></script>
     <script>
     $('.carousel').carousel({
   	  interval:3000
