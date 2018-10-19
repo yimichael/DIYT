@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> D.Y.T do your trip </title>
+
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+    <link href="./css/jquery.fancybox.css" rel="stylesheet">
+
+
+
+<style><!-- 로그인 화면-->
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("file:///C:/Users/heojp/git/webui/webui/WebContent/3_bootstrap_class/images/osaka2.jpg");
+
+    min-height: 580px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+</style>
+
+
+</head>
+
+	<!-- login s-->
+	
+	<h2></h2><!-- 로그인 화면 -->
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="id"><b>아이디</b></label>
+    <input type="text" placeholder="아이디" name="id" required>
+
+    <label for="pwd"><b>비밀번호</b></label>
+    <input type="password" placeholder="패스워드" name="pwd" required>
+
+    <button type="submit" class="btn">제출</button>
+  </form>
+</div>
+	<!-- login e-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-hover-dropdown.js"></script>
+    <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/simpleparallax.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <script>
+   
+
+
+    </script>  
+</body>
+</html>
