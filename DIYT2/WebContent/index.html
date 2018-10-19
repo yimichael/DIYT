@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> D.Y.T do your trip </title>
+
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+    <link href="./css/jquery.fancybox.css" rel="stylesheet">
+
+<style>
+<!-- carousel-->
+#carousel-generic{margin-top:100px;}
+
+</style>
+
+
+<style>
+<!--전체여행지 버튼-->
+
+<!--전체여행지 버튼-->
+
+<!--인기있는 여행지 포트폴리오-->
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1130px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+<!-- 테마가 있는 여행-->
+
+<!-- 테마가 있는 여행-->
+</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+       
+        <div class="container">
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+           
+            <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse navbar-left navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#"> D.Y.T do your trip </a></li>                   
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="DYT_login.html"> 로그인 </a></li>  
+                <li><a href="DYT_account.html"> 회원가입 </a></li>                   
+              </ul>
+            </div>
+            </div><!-- /.navbar-collapse -->
+            
+          </nav>
+        </div>
+        <hr>
+     
+        <br>
+       <p></p>
+
+	<div class="container">
+	<div class='indentation'>
+		<button type="button" class="btn btn-link btn-md">전체여행지</button>
+		<button type="button" class="btn btn-link btn-md">홈</button>
+		<button type="button" class="btn btn-link btn-md">투어&티켓</button>
+		<button type="button" class="btn btn-link btn-md">항공권</button>
+		<button type="button" class="btn btn-link btn-md">숙소</button>
+	</div>
+	</div>
+	
+
+	<div id="carousel-generic" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-generic" data-slide-to="2"></li>             
+          </ol>
+  
+           <!-- Carousel items -->
+
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="../3_bootstrap/123.jpg" alt="Los Angeles"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="../3_bootstrap/1234.jpg" alt="Chicago"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="../3_bootstrap/12345.jpg" alt="New york"
+					style="width: 100%;">
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-generic"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#carousel-generic"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span> <span
+			class="sr-only">Next</span>
+		</a>
+
+	</div>
+<!--  fluid container 끝 -->
+
+<!-- 인기있는 여행지 포트폴리오 시작 -->
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+
+
+<h3>인기있는 여행지</h3>
+
+<div id="myBtnContainer">
+<!--   <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+  <button class="btn" onclick="filterSelection('osaka')"> 오사카</button>
+  <button class="btn" onclick="filterSelection('tokyo')"> 도쿄</button>
+  <button class="btn" onclick="filterSelection('paris')"> 파리</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column osaka">
+    <div class="content">
+     <a class="fancybox" rel="gallery2" href="./images/osaka1.jpg">
+      <img src="./images/osaka1.jpg" alt="osaka castle" style="width:100%">
+     </a>
+      <h4>오사카성</h4>
+      <p>야경</p>
+    </div>
+  </div>
+  <div class="column osaka">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/osaka2.jpg">
+     <img src="./images/osaka2.jpg" alt="osaka castle" style="width:100%">
+    </a>
+      <h4>오사카성</h4>
+      <p>수로</p>
+    </div>
+  </div>
+  <div class="column osaka">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/osaka3.jpg">
+     <img src="./images/osaka3.jpg" alt="osaka market" style="width:100%">
+    </a>  
+      <h4>오사카시장</h4>
+      <p>시장거리</p>
+    </div>
+  </div>
+  
+  <div class="column tokyo">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/tokyo1.jpg">
+      <img src="./images/tokyo1.jpg" alt="street" style="width:100%">
+    </a>
+      <h4>도쿄</h4>
+      <p>길거리</p>
+    </div>
+  </div>
+  <div class="column tokyo">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/tokyo2.jpg">
+    <img src="./images/tokyo2.jpg" alt="night view" style="width:100%">
+    </a>
+      <h4>도쿄</h4>
+      <p>야경</p>
+    </div>
+  </div>
+  <div class="column tokyo">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/tokyo3.jpg">
+    <img src="./images/tokyo3.jpg" alt="night street" style="width:100%">
+    </a>
+      <h4>도쿄</h4>
+      <p>밤거리</p>
+    </div>
+  </div>
+
+  <div class="column paris">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/paris1.jpg">
+      <img src="./images/paris1.jpg" alt="river" style="width:100%">
+    </a>
+      <h4>파리</h4>
+      <p>센강</p>
+    </div>
+  </div>
+  <div class="column paris">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/paris2.jpg">
+      <img src="./images/paris2.jpg" alt="door" style="width:100%">
+    </a>
+      <h4>파리</h4>
+      <p>샹제리제 거리</p>
+    </div>
+  </div>
+  <div class="column paris">
+    <div class="content">
+    <a class="fancybox" rel="gallery2" href="./images/paris3.jpg">
+      <img src="./images/paris3.jpg" alt="door" style="width:100%">
+    </a>
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("osaka")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<!-- 인기있는 여행지 포트폴리오 끝 -->
+
+<!-- 테마가 있는 여행 시작 -->
+<div class="container portfolio  wp4 delay-05s" >
+<h3 style='padding:8px;'class="sans">테마가 있는 여행</h3>  
+           <div class="row">
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                  <a class="fancybox" rel="gallery2" href="./images/osaka.jpg">
+                   <img src="./images/osaka.jpg" alt="">
+                  </a> 
+                  	<div class="caption">
+                    	<h4 style='text-align:center;'>오사카</h4>
+                    </div>
+                </div> 
+             </div>
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                  <a class="fancybox" rel="gallery2" href="./images/tokyo.jpg">
+                   <img src="./images/tokyo.jpg" alt="">
+                  </a> 
+                  <div class="caption">
+                    	<h4 style='text-align:center;'>도쿄</h4>
+                  </div>
+                </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+                <a class="fancybox" rel="gallery2" href="./images/paris3.jpg">
+                  <img src="./images/paris3.jpg" alt="">
+                </a>
+                <div class="caption">
+                    	<h4 style='text-align:center;'>파리</h4>
+                </div>
+              </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+                <a class="fancybox" rel="gallery2" href="./images/kyoto.jpg">
+                  <img src="./images/kyoto.jpg" alt="">
+                </a>
+                <div class="caption">
+                    	<h4 style='text-align:center;'>교토</h4>
+                </div>
+              </div>  
+             </div>
+           </div>  
+         </div> 
+<!-- 테마가 있는 여행 끝 -->
+ 
+<footer>
+  <p>Posted by: DYT</p>
+  <p>Contact information: <a href="#">DYT.com</a></p>
+  <p>상호명 DYT | 대표 : DYT | 개인정보책임자 : DYT
+사업자등록번호 : ###-##-##### | 통신판매업신고번호 : 2018-서울서초-##### | 사업자정보확인
+서울특별시 서초구 길거리 (주)DYT
+일반 전화문의 : ####-#### | 일반 이메일문의 : DYT@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+항공권 전화문의 : ####-#### | 항공권 이메일문의 : flights@DY.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+마케팅/제휴 이메일문의 : marketing@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무
+자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있지 않습니다.
+DYT는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-hover-dropdown.js"></script>
+    <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/simpleparallax.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <script>
+    $('.carousel').carousel({
+  	  interval:3000
+  	  
+    })
+
+        
+
+
+    </script>  
+</body>
+</html>
